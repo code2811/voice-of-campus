@@ -3,8 +3,10 @@
 @use 'typography' as *;
 @use 'spacing' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 body {
-  font-family: $font-family-base;
+  font-family: 'Inter', $font-family-base;
   font-size: $font-size-base;
   color: $text-color;
   background: $background-color;
@@ -12,7 +14,164 @@ body {
   margin: 0;
 }
 
+header {
+  background: $primary-color;
+  color: $high-contrast;
+  padding: $space-sm 0;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: $space-md;
+    a {
+      color: $high-contrast;
+      text-decoration: none;
+      font-weight: 700;
+      padding: $space-xs $space-sm;
+      border-radius: 4px;
+      transition: background 0.2s;
+      &:hover, &:focus {
+        background: $accent-color;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.hero {
+  background: $primary-color;
+  color: $high-contrast;
+  text-align: center;
+  padding: $space-lg $space-sm $space-md $space-sm;
+  h1 {
+    font-size: $font-size-lg * 1.5;
+    margin-bottom: $space-sm;
+  }
+  .tagline {
+    font-size: $font-size-lg;
+    margin-bottom: $space-sm;
+  }
+  .personal-intro {
+    font-size: $font-size-sm;
+    margin-bottom: $space-md;
+    color: $background-color;
+    opacity: 0.9;
+  }
+  .cta {
+    display: inline-block;
+    background: $accent-color;
+    color: $high-contrast;
+    font-weight: 700;
+    padding: $space-xs $space-md;
+    border-radius: 24px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    &:hover, &:focus {
+      background: $high-contrast;
+      color: $primary-color;
+    }
+  }
+}
+
+#featured {
+  padding: $space-lg $space-sm $space-md $space-sm;
+  background: $background-color;
+  h2 {
+    text-align: center;
+    margin-bottom: $space-md;
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: $space-md;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .story-card {
+    background: $high-contrast;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+    padding: $space-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+    &:hover, &:focus {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 6px 24px rgba(44, 62, 80, 0.13);
+    }
+    figure {
+      margin: 0 0 $space-sm 0;
+      img {
+        width: 100%;
+        max-width: 180px;
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 0 1px 6px rgba(44, 62, 80, 0.08);
+      }
+      figcaption {
+        font-size: $font-size-sm;
+        color: $primary-color;
+        margin-top: $space-xs;
+      }
+    }
+    h3 {
+      margin: $space-xs 0 0 0;
+      font-size: $font-size-lg;
+      a {
+        color: $text-color;
+        text-decoration: none;
+        &:hover, &:focus {
+          color: $primary-color;
+        }
+      }
+    }
+    p {
+      font-size: $font-size-sm;
+      color: $text-color;
+      margin: $space-xs 0 0 0;
+      text-align: center;
+    }
+  }
+}
+
+.why-storytelling, .my-experience {
+  max-width: 700px;
+  margin: $space-lg auto;
+  background: $high-contrast;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: $space-lg $space-md;
+  h2 {
+    color: $primary-color;
+    margin-bottom: $space-sm;
+  }
+  p {
+    color: $text-color;
+    font-size: $font-size-base;
+    margin-bottom: $space-xs;
+  }
+}
+
+footer {
+  background: $accent-color;
+  color: $high-contrast;
+  text-align: center;
+  padding: $space-md 0;
+  font-size: $font-size-sm;
+  margin-top: $space-lg;
+}
+
 :focus {
   outline: 3px solid $focus-color;
   outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .hero, #featured, .why-storytelling, .my-experience {
+    padding: $space-md $space-xs;
+  }
+  .story-card figure img {
+    max-width: 100px;
+  }
 }
