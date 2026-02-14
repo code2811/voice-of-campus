@@ -1,1 +1,173 @@
-/* Compiled CSS will be generated from Sass. This is a placeholder. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+body {
+  font-family: "Inter", "Inter", Arial, sans-serif;
+  font-size: 1.125rem;
+  color: #22223b;
+  background: #f6f6f6;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  background: #3aafa9;
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+header nav a:hover, header nav a:focus {
+  background: #17252a;
+  color: #3aafa9;
+}
+
+.hero {
+  background: #3aafa9;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero .tagline {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero .personal-intro {
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  color: #f6f6f6;
+  opacity: 0.9;
+}
+.hero .cta {
+  display: inline-block;
+  background: #17252a;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.hero .cta:hover, .hero .cta:focus {
+  background: #fff;
+  color: #3aafa9;
+}
+
+#featured {
+  padding: 3rem 1rem 2rem 1rem;
+  background: #f6f6f6;
+}
+#featured h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#featured .story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#featured .story-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+#featured .story-card:hover, #featured .story-card:focus {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.13);
+}
+#featured .story-card figure {
+  margin: 0 0 1rem 0;
+}
+#featured .story-card figure img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 1px 6px rgba(44, 62, 80, 0.08);
+}
+#featured .story-card figure figcaption {
+  font-size: 0.95rem;
+  color: #3aafa9;
+  margin-top: 0.5rem;
+}
+#featured .story-card h3 {
+  margin: 0.5rem 0 0 0;
+  font-size: 2rem;
+}
+#featured .story-card h3 a {
+  color: #22223b;
+  text-decoration: none;
+}
+#featured .story-card h3 a:hover, #featured .story-card h3 a:focus {
+  color: #3aafa9;
+}
+#featured .story-card p {
+  font-size: 0.95rem;
+  color: #22223b;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+}
+
+.why-storytelling, .my-experience {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+  padding: 3rem 2rem;
+}
+.why-storytelling h2, .my-experience h2 {
+  color: #3aafa9;
+  margin-bottom: 1rem;
+}
+.why-storytelling p, .my-experience p {
+  color: #22223b;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background: #17252a;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+:focus {
+  outline: 3px solid #3aafa9;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .hero, #featured, .why-storytelling, .my-experience {
+    padding: 2rem 0.5rem;
+  }
+  .story-card figure img {
+    max-width: 100px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
