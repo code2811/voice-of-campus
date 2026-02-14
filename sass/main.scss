@@ -1,0 +1,18 @@
+// Main Sass file for Voice of Campus
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'spacing' as *;
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-color;
+  background: $background-color;
+  line-height: $line-height-base;
+  margin: 0;
+}
+
+:focus {
+  outline: 3px solid $focus-color;
+  outline-offset: 2px;
+}
